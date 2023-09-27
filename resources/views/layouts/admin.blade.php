@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png') }}" />
-
+    <style>
+        .form-control
+        {
+            border: 1px solid #ddd;
+        }
+    </style>
     @livewireStyles
 </head>
 
@@ -57,7 +62,8 @@
     <script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/js/dataTables.bootstrap4.js') }}"></script>
     <!-- End custom js for this page-->
-    @livewireStyles
+    @livewireScripts
+    @stack('script')
 
 </body>
 
