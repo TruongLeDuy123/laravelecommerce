@@ -16,7 +16,6 @@
                         <button type="submit" class="btn btn-primary">Delete</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
