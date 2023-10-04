@@ -45,4 +45,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // Brands
     Route::get('brands', App\Http\Livewire\Admin\Brand\Index::class);
 
+    // Colors
+    Route::get('colors', [App\Http\Controllers\Admin\ColorController::class, 'index']);
+    Route::get('colors/create', [App\Http\Controllers\Admin\ColorController::class, 'create']);
+    Route::post('colors/create', [App\Http\Controllers\Admin\ColorController::class, 'store']);
+    Route::get('colors/{color}/edit', [App\Http\Controllers\Admin\ColorController::class, 'edit']);
+    Route::put('colors/{color_id}', [App\Http\Controllers\Admin\ColorController::class, 'update']);
+    Route::get('colors/{color_id}/delete', [App\Http\Controllers\Admin\ColorController::class, 'destroy']);
+
 });
