@@ -22,7 +22,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Color Name</th>
-                            <th>Color Color</th>
+                            <th>Color</th>
                             <th>Status</th>
                             <th>Action</th>
 

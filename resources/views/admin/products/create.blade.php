@@ -43,6 +43,11 @@
                                     Product Image
                                 </button>
                             </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="color-tab" data-bs-toggle="tab" data-bs-target="#color-tab-pane" type="button" role="tab" aria-controls="color" aria-selected="false">
+                                    Product Color
+                                </button>
+                            </li>
                         </ul>
 
                         <!-- Tab panes -->
@@ -136,6 +141,27 @@
                                 <div class="mb-3">
                                     <label>Upload Product Images</label>
                                     <input type="file" name="image[]" multiple class="form-control">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade border p-3" id="color-tab-pane" role="tabpanel" aria-labelledby="color-tab" tabindex="0">
+                                <div class="mb-3">
+                                    <label>Select Color</label>
+                                    <hr/>
+                                    <div class="row">
+                                        @forelse ($colors as $color)
+                                            <div class="col-md-3">
+                                                <div class="p-2 border mb-3">
+                                                    Color: <input type="checkbox" name="colors[{{ $color->id }}]" value="{{ $color->id }}">{{ $color->name }}
+                                                    <br/>
+                                                    Quantity: <input type="number" name="colorquantity[{{ $color->id }}]" style="width: 70px;border: 1px solid" id="" />
+                                                </div>
+                                            </div>
+                                            @empty
+                                            <div class="col-md-12">
+                                                <h1>No Colors Found</h1>
+                                            </div>
+                                        @endforelse
+                                    </div>
                                 </div>
                             </div>
                         </div>

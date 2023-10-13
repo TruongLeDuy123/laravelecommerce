@@ -42,6 +42,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('products/{product_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
     Route::get('product-image/{product_image_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'destroyImage']);
 
+    Route::post('product-color/{prod_color_id}', [App\Http\Controllers\Admin\ProductController::class, 'updateProdColorQty']);
+    Route::get('product-color/{prod_color_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'deleteProdColor']);
+
+
     // Brands
     Route::get('brands', App\Http\Livewire\Admin\Brand\Index::class);
 
