@@ -26,6 +26,15 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
+    // Sliders
+    Route::get('sliders', [App\Http\Controllers\Admin\SliderController::class, 'index']);
+    Route::get('sliders/create', [App\Http\Controllers\Admin\SliderController::class, 'create']);
+    Route::post('sliders/create', [App\Http\Controllers\Admin\SliderController::class, 'store']);
+    Route::get('sliders/{slider}/edit', [App\Http\Controllers\Admin\SliderController::class, 'edit']);
+    Route::put('sliders/{slider}', [App\Http\Controllers\Admin\SliderController::class, 'update']);
+    Route::get('sliders/{slider}/delete', [App\Http\Controllers\Admin\SliderController::class, 'destroy']);
+
+
     // Category
     Route::get('category', [App\Http\Controllers\Admin\CategoryController::class, 'index']);
     Route::get('category/create', [App\Http\Controllers\Admin\CategoryController::class, 'create']);
