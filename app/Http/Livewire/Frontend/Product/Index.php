@@ -34,8 +34,6 @@ class Index extends Component
                                 });
                             })
                             ->where('status', '0')->get();
-        // dd(((int)$this->brandInputs));
-        
         return view('livewire.frontend.product.index',[
             'products'=> $this->products,
             'category'=> $this->category
