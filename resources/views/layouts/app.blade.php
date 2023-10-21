@@ -25,38 +25,14 @@
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 
     @livewireStyles
+    @livewireScripts
+
 </head>
 
 <body>
     <div id="app">
 
         @include('layouts.inc.frontend.navbar')
-
-        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    TRUONG DEP TRAI
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                       
-                    </ul>
-                </div>
-            </div>
-        </nav> --}}
 
         <main>
             @yield('content')
@@ -68,6 +44,7 @@
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 
     @livewireStyles
+    @livewireScripts
 </body>
 
 </html>
