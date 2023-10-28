@@ -27,10 +27,12 @@ class View extends Component
             }
             else
             {
-                $wishlist = Wishlist::create([
+                Wishlist::create([
                     'user_id' => auth()->user()->id,
                     'product_id' => $productId,
                 ]);
+                $this->emit('wishlistAddUpdated');
+
                 session()->flash("message","WishList Added Successfully");
                 $this->dispatchBrowserEvent("message", [
                     'text' => "WishList Added Successfully",
