@@ -83,4 +83,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::put('colors/{color_id}', [App\Http\Controllers\Admin\ColorController::class, 'update']);
     Route::get('colors/{color_id}/delete', [App\Http\Controllers\Admin\ColorController::class, 'destroy']);
 
+    Route::get('orders', [App\Http\Controllers\Admin\OrderController::class, 'index']);
+    Route::get('orders/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'show']);
+    Route::put('orders/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'updateOrderStatus']);
+
+    
 });
