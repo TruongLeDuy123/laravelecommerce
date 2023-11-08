@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -51,5 +52,21 @@ class OrderController extends Controller
         {
             return redirect('admin/orders/'.$orderId)->with('message','Order Id Is Not Founded');
         }
+    }
+
+    public function viewInvoice(int $orderId)
+    {
+        $order = Order::findOrFail($orderId);
+        return view('admin.invoice.generate-invoice', compact('order'));
+    }
+
+    public function generateInvoice(int $orderId)
+    {
+        $order = Order::findOrFail($orderId);
+        $data = ['order' => $order];
+
+        $pdf = Pdf::loadView('admin.invoice.generate-invoice', $data);
+        $todayDate = Carbon::now()->format("d-m-T");
+        return $pdf->download('invoice-'.$order->id.'-'.$todayDate.'.pdf');
     }
 }

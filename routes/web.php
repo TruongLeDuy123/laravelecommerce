@@ -87,5 +87,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('orders/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'show']);
     Route::put('orders/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'updateOrderStatus']);
 
+    Route::get('invoice/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'viewInvoice']);
+    Route::get('invoice/{orderId}/generate', [App\Http\Controllers\Admin\OrderController::class, 'generateInvoice']);
+
+
     
 });
