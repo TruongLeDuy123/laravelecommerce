@@ -93,7 +93,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('invoice/{orderId}', [App\Http\Controllers\Admin\OrderController::class, 'viewInvoice']);
     Route::get('invoice/{orderId}/generate', [App\Http\Controllers\Admin\OrderController::class, 'generateInvoice']);
-
-
     
+    Route::get('/users', [App\Http\Controllers\Admin\UserController::class, 'index']);
+    Route::get('/users/create', [App\Http\Controllers\Admin\UserController::class, 'create']);
+    Route::post('/users', [App\Http\Controllers\Admin\UserController::class, 'store']);
+    Route::get('/users/{user_id}/edit', [App\Http\Controllers\Admin\UserController::class, 'edit']);
+    Route::put('/users/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
+    Route::get('/users/{user_id}/delete', [App\Http\Controllers\Admin\UserController::class, 'destroy']);
+
 });

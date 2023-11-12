@@ -71,6 +71,21 @@
                 <span class="menu-title">Site Setting</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                aria-controls="ui-basic">
+                <i class="mdi mdi-user menu-icon"></i>
+                <span class="menu-title">Users</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users/create') }}">Add User</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users') }}">View User</a></li>
+                </ul>
+            </div>
+        </li>
         
     </ul>
 </nav>
