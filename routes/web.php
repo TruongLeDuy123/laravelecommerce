@@ -26,6 +26,7 @@ Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\Fronte
 Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
 Route::get('/new-arrivals', [App\Http\Controllers\Frontend\FrontendController::class, 'newArrival']);
 Route::get('/featured-products', [App\Http\Controllers\Frontend\FrontendController::class, 'featuredProducts']);
+Route::get('/search', [App\Http\Controllers\Frontend\FrontendController::class, 'searchProducts']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('wishlist', [App\Http\Controllers\Frontend\WishlistController::class,'index']);
