@@ -3,7 +3,7 @@
         <div class="col-md-3">
             @if ($category->brands)
                 <div class="card">
-                    <div class="card-header"><h4>Brands</h4></div>
+                    <div class="card-header"><h4>Nhãn hiệu</h4></div>
                     <div class="card-body">
                         @foreach ($category->brands as $brandItem)
                             <label class="d-block">
@@ -15,13 +15,13 @@
             @endif
 
             <div class="card mt-3">
-                <div class="card-header"><h4>Brands</h4></div>
+                <div class="card-header"><h4>Giá</h4></div>
                 <div class="card-body">
                     <label class="d-block">
-                        <input type="radio" name="priceSort" wire:model="priceInput" value="high-to-low"/>High to Low 
+                        <input type="radio" name="priceSort" wire:model="priceInput" value="high-to-low"/>Cao đến thấp
                     </label>
                     <label class="d-block">
-                        <input type="radio" name="priceSort" wire:model="priceInput" value="low-to-high"/>Low to High 
+                        <input type="radio" name="priceSort" wire:model="priceInput" value="low-to-high"/>Thấp đến cao
                     </label>
                 </div>
             </div>
@@ -33,9 +33,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 @if ($productItem->quantity > 0)
-                                    <label class="stock bg-success">In Stock</label>
+                                    <label class="stock bg-success">Còn hàng</label>
                                 @else
-                                    <label class="stock bg-danger">Out of Stock</label>
+                                    <label class="stock bg-danger">Hết hàng</label>
                                 @endif
                                 @if ($productItem->productImages->count() > 0)
                                     <a href="{{ url('/collections/'.$productItem->category->slug.'/'.$productItem->slug) }}">
@@ -62,7 +62,7 @@
                 @empty
                     <div class="col-md-12">
                         <div class="p-2">
-                            <h4>No Products Available for {{ $category->name }}</h4>
+                            <h4>Không còn sản phẩm nào cho {{ $category->name }}</h4>
                         </div>
                     </div>
                 @endforelse

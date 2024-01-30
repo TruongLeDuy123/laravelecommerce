@@ -10,8 +10,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Edit Products
-                        <a href="{{ url('admin/products') }}" class="btn btn-primary btn-sm text-white float-end">BACK</a>
+                    <h3>Chỉnh sửa sản phẩm
+                        <a href="{{ url('admin/products') }}" class="btn btn-primary btn-sm text-white float-end">Quay lại</a>
                     </h3>
                 </div>
 
@@ -47,20 +47,20 @@
                                 <button class="nav-link" id="details-tab" data-bs-toggle="tab"
                                     data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details"
                                     aria-selected="false">
-                                    Details
+                                    Chi tiết
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="image-tab" data-bs-toggle="tab"
                                     data-bs-target="#image-tab-pane" type="button" role="tab" aria-controls="image"
                                     aria-selected="false">
-                                    Product Image
+                                    Ảnh sản phẩm
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="colors-tab" data-bs-toggle="tab"
                                     data-bs-target="#colors-tab-pane" type="button" role="tab">
-                                    Product Colors
+                                    Màu sản phẩm
                                 </button>
                             </li>
                         </ul>
@@ -70,7 +70,7 @@
                             <div class="tab-pane fade border p-3 show active" id="home-tab-pane" role="tabpanel"
                                 aria-labelledby="home-tab" tabindex="0">
                                 <div class="mb-3">
-                                    <label>Category</label>
+                                    <label>Danh mục</label>
                                     <select name="category_id" class="form-control" id="">
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"
@@ -80,17 +80,17 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Product Name</label>
+                                    <label>Tên sản phẩm</label>
                                     <input type="text" name="name" value="{{ $product->name }}"
                                         class="form-control" />
                                 </div>
                                 <div class="mb-3">
-                                    <label>Product Slug</label>
+                                    <label>Slug sản phẩm</label>
                                     <input type="text" name="slug" value="{{ $product->slug }}"
                                         class="form-control" />
                                 </div>
                                 <div class="mb-3">
-                                    <label>Select Brand</label>
+                                    <label>Chọn nhãn hiệu</label>
                                     <select name="brand" class="form-control">
                                         @foreach ($brands as $brand)
                                             <option value="{{ $brand->name }}"
@@ -101,11 +101,11 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Small Description (500 Words)</label>
+                                    <label>Mô tả ngắn (500 từ)</label>
                                     <textarea name="small_description" class="form-control" rows="4">{{ $product->small_description }}</textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Description</label>
+                                    <label>Mô tả</label>
                                     <textarea name="description" class="form-control" rows="4">{{ $product->description }}</textarea>
                                 </div>
                             </div>
@@ -133,28 +133,28 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Original Price</label>
+                                            <label>Giá gốc</label>
                                             <input type="text" name="original_price"
                                                 value="{{ $product->original_price }}" class="form-control" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Selling Price</label>
+                                            <label>Giá bán</label>
                                             <input type="text" name="selling_price"
                                                 value="{{ $product->selling_price }}" class="form-control" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Quantity</label>
+                                            <label>Số lượng</label>
                                             <input type="number" name="quantity" value="{{ $product->quantity }}"
                                                 class="form-control" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Trending</label>
+                                            <label>Xu hướng</label>
                                             <input type="checkbox" name="trending"
                                                 {{ $product->trending == '1' ? 'checked' : '' }}
                                                 style="width: 30px; height: 30px" />
@@ -162,7 +162,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Featured</label>
+                                            <label>Đặc trưng</label>
                                             <input type="checkbox" name="featured"
                                                 {{ $product->featured == '1' ? 'checked' : '' }}
                                                 style="width: 30px; height: 30px" />
@@ -170,7 +170,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label>Status</label>
+                                            <label>Trạng thái</label>
                                             <input type="checkbox" name="status"
                                                 {{ $product->status == '1' ? 'checked' : '' }}
                                                 style="width: 30px; height: 30px" />
@@ -181,7 +181,7 @@
                             <div class="tab-pane fade border p-3" id="image-tab-pane" role="tabpanel"
                                 aria-labelledby="image-tab" tabindex="0">
                                 <div class="mb-3">
-                                    <label>Upload Product Images</label>
+                                    <label>Upload ảnh sản phẩm</label>
                                     <input type="file" name="image[]" multiple class="form-control">
                                 </div>
                                 <div>
@@ -193,37 +193,37 @@
                                                         style="width: 80px; height:80px" class="me-4 border"
                                                         alt="Img">
                                                     <a href="{{ url('admin/product-image/' . $image->id . '/delete') }}"
-                                                        class="d-block">Remove</a>
+                                                        class="d-block">Xóa</a>
 
                                                 </div>
                                             @endforeach
                                         </div>
                                     @else
-                                        <h5>No Image Added</h5>
+                                        <h5>Không có ảnh nào được thêm</h5>
                                     @endif
                                 </div>
                             </div>
                             <div class="tab-pane fade border p-3 show active" id="colors-tab-pane" role="tabpanel"
                                 tabindex="0">
                                 <div class="mb-3">
-                                    <h4>Add Product Color</h4>
-                                    <label>Select Color</label>
+                                    <h4>Thêm màu sắc sản phẩm<h4>
+                                    <label>Chọn màu</label>
                                     <hr />
                                     <div class="row">
                                         @forelse ($colors as $color)
                                             <div class="col-md-3">
                                                 <div class="p-2 border mb-3">
-                                                    Color: <input type="checkbox" name="colors[{{ $color->id }}]"
+                                                    Màu: <input type="checkbox" name="colors[{{ $color->id }}]"
                                                         value="{{ $color->id }}">{{ $color->name }}
                                                     <br />
-                                                    Quantity: <input type="number"
+                                                    Số lượng: <input type="number"
                                                         name="colorquantity[{{ $color->id }}]"
                                                         style="width: 70px;border: 1px solid" id="" />
                                                 </div>
                                             </div>
                                         @empty
                                             <div class="col-md-12">
-                                                <h1>No Colors Found</h1>
+                                                <h1>Không có màu nào tìm thấy</h1>
                                             </div>
                                         @endforelse
                                     </div>
@@ -233,9 +233,9 @@
                                     <table class="table table-sm table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Color Name</th>
-                                                <th>Quantity</th>
-                                                <th>Delete</th>
+                                                <th>Tên màu</th>
+                                                <th>Số lượng</th>
+                                                <th>Xóa</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -245,7 +245,7 @@
                                                         @if ($productColor->color)
                                                             {{ $productColor->color->name }}
                                                         @else
-                                                            No Color Found
+                                                            Không có màu nào tìm thấy
                                                         @endif
                                                     </td>
                                                     <td>
@@ -253,12 +253,12 @@
                                                             <input type="text" value="{{ $productColor->quantity }}"
                                                                 class="productColorQuantity form-control-sm">
                                                             <button type="button" value="{{ $productColor->id }}"
-                                                                class="updateProductColorBtn btn btn-primary btn-sm text-white">Update</button>
+                                                                class="updateProductColorBtn btn btn-primary btn-sm text-white">Cập nhật</button>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <button type="button" value="{{ $productColor->id }}"
-                                                            class="deleteProductColorBtn btn btn-danger btn-sm text-white">Delete</button>
+                                                            class="deleteProductColorBtn btn btn-danger btn-sm text-white">Xóa</button>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -268,7 +268,7 @@
                             </div>
                         </div>
                         <div class="py-2 float-end">
-                            <button type="submit" class="btn btn-primary">Update</button>
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
                         </div>
                     </form>
                 </div>

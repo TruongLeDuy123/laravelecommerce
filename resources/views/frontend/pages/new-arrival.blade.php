@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>New Arrivals</h4>
+                    <h4>Mặt hàng mới</h4>
                     <div class="underline mb-4"></div>
                 </div>
 
@@ -16,7 +16,7 @@
                     <div class="col-md-3">
                         <div class="product-card">
                             <div class="product-card-img">
-                                <label class="stock bg-danger">New</label>
+                                <label class="stock bg-danger">Mới</label>
                                 @if ($productItem->productImages->count() > 0)
                                     <a
                                         href="{{ url('/collections/' . $productItem->category->slug . '/' . $productItem->slug) }}">
@@ -42,12 +42,12 @@
                     </div>
                 @empty
                     <div class="col-md-12 p-2">
-                        <h4>No Products Available</h4>
+                        <h4>Không có sản phẩm nào</h4>
                     </div>
                 @endforelse
 
                 <div class="text-center">
-                    <a href="{{ url('collections')}}" class="btn btn-warning px-3">View More</a>
+                    <a href="{{ url('collections')}}" class="btn btn-warning px-3">Xem thêm</a>
                 </div>
             </div>
         </div>

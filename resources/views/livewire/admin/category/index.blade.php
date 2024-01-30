@@ -27,9 +27,8 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h3>Category
-                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add
-                            Category</a>
+                    <h3>Danh sách danh mục
+                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Thêm danh mục</a>
                     </h3>
                 </div>
 
@@ -38,9 +37,9 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th>Tên danh mục</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
 
                             </tr>
                         </thead>
@@ -50,13 +49,13 @@
                                 <tr>
                                     <td>{{ $category->id }}</td>
                                     <td>{{ $category->name }}</td>
-                                    <td>{{ $category->status == true ? 'Hidden' : 'Visible' }}</td>
+                                    <td>{{ $category->status == true ? 'Ẩn' : 'Hiện' }}</td>
                                     <td>
                                         <a href="{{ url('admin/category/' . $category->id . '/edit') }}"
-                                            class="btn btn-success">Edit</a>
+                                            class="btn btn-success">Sửa</a>
                                         <a href="#" wire:click="deleteCategory({{ $category->id }})"
                                             data-bs-toggle="modal" data-bs-target="#deleteModal"
-                                            class="btn btn-danger">Delete</a>
+                                            class="btn btn-danger">Xóa</a>
                                     </td>
 
                                 </tr>

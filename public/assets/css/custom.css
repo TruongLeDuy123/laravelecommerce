@@ -329,14 +329,14 @@
     height: 1px;
     width: 70px;
     background-color: #ddd;
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
 }
 .copyright-area{
-    padding: 14px 0px;
+    /* padding: 14px 0px; */
+    padding: 3%;
     background-color: #262626;
 }
 .copyright-area p{
-    margin-bottom: 0px;
     color: #fff;
 }
 .copyright-area .social-media{

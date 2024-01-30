@@ -20,8 +20,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Add User
-                        <a href="{{ url('admin/users') }}" class="btn btn-danger btn-sm text-white float-end">Back</a>
+                    <h3>Thêm User
+                        <a href="{{ url('admin/users') }}" class="btn btn-danger btn-sm text-white float-end">Quay lại</a>
                     </h3>
                 </div>
 
@@ -31,7 +31,7 @@
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label>Name</label>
+                                <label>Tên</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
@@ -43,15 +43,15 @@
                                 <input type="text" name="password" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Select Role</label>
+                                <label>Chọn vai trò</label>
                                 <select name="role_as" class="form-control">
-                                    <option value="">Select Role</option>
+                                    <option value="">Chọn vai trò</option>
                                     <option value="0">User</option>
                                     <option value="1">Admin</option>
                                 </select>
                             </div>
                             <div class="col-md-12 text-end">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Tạo</button>
                             </div>
                         </div>
 

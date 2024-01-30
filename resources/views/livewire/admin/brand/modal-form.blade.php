@@ -4,15 +4,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Brands</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm nhãn hiệu</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form wire:submit.prevent="storeBrand">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label>Select Category</label>
+                        <label>Chọn danh mục</label>
                         <select wire:model.defer="category_id" required class="form-control">
-                            <option value="">--Select Category--</option>
+                            <option value="">--Lựa chọn danh mục--</option>
                             @foreach ($categories as $cateItem)
                                 <option value="{{ $cateItem->id }}">{{ $cateItem->name }}</option>
                             @endforeach
@@ -20,7 +20,7 @@
                         @error('category_id')<small class="text-danger">{{ $message }}</small>@enderror
                     </div>
                     <div class="mb-3">
-                        <label for="">Brand Name</label>
+                        <label for="">Tên nhãn hiệu</label>
                         <input type="text" wire:model.defer="name" class="form-control">
                         @error('name')
                             <small class="text-danger">{{ $message }}</small>
@@ -28,7 +28,7 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="">Brand Slug</label>
+                        <label for="">Slug nhãn</label>
                         <input type="text" wire:model.defer="slug" class="form-control">
                         @error('slug')
                             <small class="text-danger">{{ $message }}</small>
@@ -36,8 +36,8 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="">Status</label><br>
-                        <input type="checkbox" wire:model.defer="status" />Checked=Hidden, Un-Checked=Visible
+                        <label for="">Trạng thái</label><br>
+                        <input type="checkbox" wire:model.defer="status" />Checked=Ẩn, Un-Checked=Hiện
                         @error('status')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Tạo</button>
                 </div>
             </form>
         </div>
@@ -59,21 +59,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Brands</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cập nhật nhãn hiệu</h1>
                 <button type="button" wire:click="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div wire:loading class="p-2">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden"></span>
-                </div>Loading...
+                </div>Đang tải...
             </div>
             <div wire:loading.remove>
                 <form wire:submit.prevent="updateBrand">
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label>Select Category</label>
+                            <label>Chọn danh mục</label>
                             <select wire:model.defer="category_id" required class="form-control">
-                                <option value="">--Select Category--</option>
+                                <option value="">--Chọn danh mục--</option>
                                 @foreach ($categories as $cateItem)
                                     <option value="{{ $cateItem->id }}">{{ $cateItem->name }}</option>
                                 @endforeach
@@ -81,7 +81,7 @@
                             @error('category_id')<small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="mb-3">
-                            <label>Brand Name</label>
+                            <label>Tên nhãn hiệu</label>
                             <input type="text" wire:model.defer="name" class="form-control">
                             @error('name')
                                 <small class="text-danger">{{ $message }}</small>
@@ -89,7 +89,7 @@
     
                         </div>
                         <div class="mb-3">
-                            <label>Brand Slug</label>
+                            <label>Slug</label>
                             <input type="text" wire:model.defer="slug" class="form-control">
                             @error('slug')
                                 <small class="text-danger">{{ $message }}</small>
@@ -97,8 +97,8 @@
     
                         </div>
                         <div class="mb-3">
-                            <label>Status</label><br>
-                            <input type="checkbox" wire:model.defer="status" style="width: 70px" />Checked=Hidden, Un-Checked=Visible
+                            <label>Trạng thái</label><br>
+                            <input type="checkbox" wire:model.defer="status" style="width: 70px" />Checked=Ẩn, Un-Checked=Hiện
                             @error('status')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -106,8 +106,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" wire:click="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="button" wire:click="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
                     </div>
                 </form>
             </div>
@@ -121,22 +121,22 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Brand</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa nhãn hiệu</h1>
                 <button type="button" wire:click="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div wire:loading class="p-2">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden"></span>
-                </div>Loading...
+                </div>Đang tải...
             </div>
             <div wire:loading.remove>
                 <form wire:submit.prevent="destroyBrand">
                     <div class="modal-body">
-                        <h6>Are you sure you want to delete this data?</h6>
+                        <h6>Bạn có muốn xóa nhãn hiệu này không?</h6>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" wire:click="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="button" wire:click="closeModal" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Xóa</button>
                     </div>
                 </form>
             </div>

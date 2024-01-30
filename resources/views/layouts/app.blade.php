@@ -14,7 +14,6 @@
     <meta name="keywords" content="@yield('keywords')">
     <meta name="author" content="Truong Duy">
 
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -46,9 +45,7 @@
         <main>
             @yield('content')
         </main>
-
         @include('layouts.inc.frontend.footer')
-
     </div>
 
     <!-- Scripts -->

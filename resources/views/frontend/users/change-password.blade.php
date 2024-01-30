@@ -24,28 +24,28 @@
 
                 <div class="card shadow">
                     <div class="card-header bg-primary">
-                        <h4 class="mb-0 text-white">Change Password
-                            <a href="{{ url('profile') }}" class="btn btn-danger float-end">Back</a>
+                        <h4 class="mb-0 text-white">Thay đổi mật khẩu
+                            <a href="{{ url('profile') }}" class="btn btn-danger float-end">Quay lại</a>
                         </h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ url('change-password') }}" method="POST">
-                            @csrf
+                            @csrf   
                             <div class="mb-3">
-                                <label>Current Password</label>
+                                <label>Mật khẩu hiện tại</label>
                                 <input type="password" name="current_password" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label>New Password</label>
+                                <label>Mật khẩu mới</label>
                                 <input type="password" name="password" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label>Confirm Password</label>
+                                <label>Xác nhận mật khẩu</label>
                                 <input type="password" name="password_confirmation" class="form-control" />
                             </div>
                             <div class="mb-3 text-end">
                                 <hr>
-                                <button type="submit" class="btn btn-primary">Update Password</button>
+                                <button type="submit" class="btn btn-primary">Cập nhật</button>
                             </div>
                         </form>
                     </div>

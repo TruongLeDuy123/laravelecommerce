@@ -9,20 +9,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="shadow bg-white p-3">
-                        <h4 class="mb-4">My Orders</h4>
+                        <h4 class="mb-4">Đơn hàng của tôi</h4>
                         <hr>
 
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Order ID</th>
-                                        <th>Tracking No</th>
-                                        <th>Username</th>
-                                        <th>Payment Mode</th>
-                                        <th>Ordered Date</th>
-                                        <th>Status Message</th>
-                                        <th>Action</th>
+                                        <th>ID</th>
+                                        <th>Số theo dõi</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>Phương thức thanh toán</th>
+                                        <th>Ngày đặt hàng</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,11 +35,11 @@
                                             <td>{{ $item->created_at->format('d-m-Y') }}</td>
                                             <td>{{ $item->status_message }}</td>
                                             <td><a href="{{ url('orders/' . $item->id) }}"
-                                                    class="btn btn-primary btn-sm">View</a></td>
+                                                    class="btn btn-primary btn-sm">Xem</a></td>
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="7">No Orders Available</td>
+                                            <td colspan="7">Không có đơn hàng nào</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

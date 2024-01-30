@@ -11,25 +11,25 @@
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <h4 class="footer-heading">Quick Links</h4>
+                    <h4 class="footer-heading">Links nhanh chóng</h4>
                     <div class="footer-underline"></div>
                     <div class="mb-2"><a href="{{ url('/') }}" class="text-white">Home</a></div>
-                    <div class="mb-2"><a href="{{ url('/about-us') }}" class="text-white">About Us</a></div>
-                    <div class="mb-2"><a href="{{ url('/contact-us') }}" class="text-white">Contact Us</a></div>
+                    <div class="mb-2"><a href="{{ url('/about-us') }}" class="text-white">Về chúng tôi</a></div>
+                    <div class="mb-2"><a href="{{ url('/contact-us') }}" class="text-white">Liên hệ</a></div>
                     <div class="mb-2"><a href="{{ url('/blogs') }}" class="text-white">Blogs</a></div>
-                    <div class="mb-2"><a href="#" class="text-white">Sitemaps</a></div>
+                    <div class="mb-2"><a href="#" class="text-white">Sơ đồ</a></div>
                 </div>
                 <div class="col-md-3">
-                    <h4 class="footer-heading">Shop Now</h4>
+                    <h4 class="footer-heading">Shop</h4>
                     <div class="footer-underline"></div>
-                    <div class="mb-2"><a href="{{ url('/collections') }}" class="text-white">Collections</a></div>
-                    <div class="mb-2"><a href="" class="text-white">Trending Products</a></div>
-                    <div class="mb-2"><a href="{{ url('/new-arrivals') }}" class="text-white">New Arrivals Products</a></div>
-                    <div class="mb-2"><a href="{{ url('/featured-products') }}" class="text-white">Featured Products</a></div>
-                    <div class="mb-2"><a href="{{ url('/cart') }}" class="text-white">Cart</a></div>
+                    <div class="mb-2"><a href="{{ url('/collections') }}" class="text-white">Thu thập</a></div>
+                    <div class="mb-2"><a href="" class="text-white">Sản phẩm xu hướng</a></div>
+                    <div class="mb-2"><a href="{{ url('/new-arrivals') }}" class="text-white">Sản phẩm mới</a></div>
+                    <div class="mb-2"><a href="{{ url('/featured-products') }}" class="text-white">Sản phẩm nổi bật</a></div>
+                    <div class="mb-2"><a href="{{ url('/cart') }}" class="text-white">Giỏ hàng</a></div>
                 </div>
                 <div class="col-md-3">
-                    <h4 class="footer-heading">Reach Us</h4>
+                    <h4 class="footer-heading">Liên hệ</h4>
                     <div class="footer-underline"></div>
                     <div class="mb-2">
                         <p>
@@ -58,7 +58,6 @@
                 </div>
                 <div class="col-md-4">
                     <div class="social-media">
-                        Get Connected:
                         @if($appSetting->facebook)
                             <a href="{{ $appSetting->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
                         @endif
@@ -67,12 +66,10 @@
                         @endif
                         @if($appSetting->instagram)
                             <a href="{{ $appSetting->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
-                        
                         @endif
                         @if($appSetting->youtube)
                             <a href="{{ $appSetting->youtube }}" target="_blank"><i class="fa fa-youtube"></i></a>
                         @endif
-
                     </div>
                 </div>
             </div>

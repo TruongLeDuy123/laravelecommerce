@@ -14,9 +14,10 @@
                     @endif
 
                     <div class="p-4 shadow bg-white">
-                        <h2>You Logo</h2>
-                        <h4>Thank You For Shopping with Funda Ecommerce</h4>
-                        <a href="{{ url('collections') }}" class="btn btn-primary">Shop now</a>
+                        <img src="https://media.istockphoto.com/id/1266252971/vector/online-shop-logo-design.jpg?s=612x612&w=0&k=20&c=UtXBlVqaijOagZXPDiEZNlDoBRfE8o7RW8Sb1VUdUeg=" class="w-20" style="height:250px" alt="">
+
+                        <h4>Cảm ơn bạn vì đã mua sắm tại cửa hàng Truong-Duy</h4>
+                        <a href="{{ url('collections') }}" class="btn btn-primary">Mua sắm ngay</a>
                     </div>
                 </div>
             </div>

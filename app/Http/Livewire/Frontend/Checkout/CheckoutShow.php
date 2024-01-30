@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire\Frontend\Checkout;
 
+use App\Mail\PlaceOrderMailable;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Orderitem;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 use Illuminate\Support\Str;
 class CheckoutShow extends Component
@@ -105,6 +107,16 @@ class CheckoutShow extends Component
         {
             Cart::where('user_id', auth()->user()->id)->delete();
 
+            try
+            {
+                // Mail sent succe
+                $order = Order::findOrFail($codOrder->id);
+                Mail::to("$order->email")->send(new PlaceOrderMailable($order));
+            }
+            catch(\Exception $e)
+            {
+                // Something Wrong
+            }
             session()->flash('message', 'Order Placed Successfully');
             $this->dispatchBrowserEvent("message", [
                 'text' => 'Order Placed Successfully',
@@ -136,6 +148,10 @@ class CheckoutShow extends Component
     {
         $this->fullname = auth()->user()->name;
         $this->email = auth()->user()->email;
+        $this->phone = auth()->user()->userDetail->phone;
+        $this->pincode = auth()->user()->userDetail->pin_code;
+        $this->address = auth()->user()->userDetail->address;
+
 
         $this->totalProductAmount = $this->totalProductAmount();
         return view('livewire.frontend.checkout.checkout-show', [

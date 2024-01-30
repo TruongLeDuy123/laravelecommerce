@@ -1,7 +1,7 @@
 <div>
     <div class="py-3 py-md-5">
         <div class="container">
-            <h4>My Cart</h4>
+            <h4>Giỏ hàng của tôi</h4>
             <hr>
             <div class="row">
                 <div class="col-md-12">
@@ -10,19 +10,19 @@
                         <div class="cart-header d-none d-sm-none d-mb-block d-lg-block">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h4>Products</h4>
+                                    <h4>Sản phẩm</h4>
                                 </div>
                                 <div class="col-md-1">
-                                    <h4>Price</h4>
+                                    <h4>Giá</h4>
                                 </div>
                                 <div class="col-md-2">
-                                    <h4>Quantity</h4>
+                                    <h4>Số lượng</h4>
                                 </div>
                                 <div class="col-md-1">
-                                    <h4>Total</h4>
+                                    <h4>Thành tiền</h4>
                                 </div>
                                 <div class="col-md-2">
-                                    <h4>Remove</h4>
+                                    <h4>Xóa</h4>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                                 {{ $cartItem->product->name }}
                                                 @if ($cartItem->productColor)
                                                     @if ( $cartItem->productColor->color)
-                                                    <span>- Color: {{ $cartItem->productColor->color->name }}</span>
+                                                    <span>- Màu: {{ $cartItem->productColor->color->name }}</span>
                                                     @endif
                                                 @endif
                                             </label>
@@ -69,12 +69,12 @@
                                     </div>
                                     <div class="col-md-2 col-5 my-auto">
                                         <div class="remove">
-                                            <button type="button" wire:loading.attr="disabled" wire:click="removeCartItem({{ $cartItem->id }})" class="btn btn-danger btn-sm">
+                                            <button type="button" wire:loading.attr="disabled" wire:click="removeCartItem({{ $cartItem->id }})" class="btn btn-danger btn-sm" style="width:100px">
                                                 <span wire:loading.remove wire:target="removeCartItem({{ $cartItem->id }})">
-                                                    <i class="fa fa-trash"></i> Remove
+                                                    <i class="fa fa-trash"></i> Xóa
                                                 </span>
                                                 <span wire:loading wire:target="removeCartItem({{ $cartItem->id }})">
-                                                    <i class="fa fa-trash"></i> Removing
+                                                    <i class="fa fa-trash"></i> Đang xóa
                                                 </span>
                                             </button>
                                         </div>
@@ -83,7 +83,7 @@
                             </div>
                         @endif
                         @empty
-                        <div>No Cart Items Available</div>
+                        <div>Không có giỏ hàng nào</div>
                     @endforelse
                                 
                     </div>
@@ -93,17 +93,17 @@
             <div class="row">
                 <div class="col-md-8 my-md-auto mt-3">
                     <h4>
-                        Get the best deals & Offers <a href="{{ url('/collections') }}">shop now</a>
+                        Nhận các giao dịch và ưu đãi tốt nhất <a href="{{ url('/collections') }}">Mua ngay</a>
                     </h4>
                 </div>
 
                 <div class="col-md-4 mt-3">
                     <div class="shadow-sm bg-white p-3">
-                        <h5>Total:
+                        <h5>Tổng cộng:
                             <span class="float-end">${{ $totalPrice }}</span>
                         </h5>
                         <hr>
-                        <a href="{{ url('/checkout') }}" class="btn btn-warning w-100">Checkout</a>
+                        <a href="{{ url('/checkout') }}" class="btn btn-warning w-100">Thanh toán</a>
                     </div>
                 </div>
             </div>

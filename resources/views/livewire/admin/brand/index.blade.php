@@ -6,8 +6,8 @@
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        Brands List
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrandModal" class="btn btn-primary btn-sm float-end">Add Brands</a>
+                        Danh sách các nhãn hiệu
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrandModal" class="btn btn-primary btn-sm float-end">Thêm nhãn hiệu</a>
                     </h4>
                 </div>
 
@@ -16,11 +16,11 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Category</th>
+                                <th>Tên</th>
+                                <th>Danh mục</th>
                                 <th>Slug</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,20 +32,20 @@
                                         @if ($brand->category)
                                         {{ $brand->category->name }}
                                         @else
-                                        No Category
+                                            Không có danh mục nào
                                         @endif
                                     </td>
                                     <td>{{ $brand->slug }}</td>
-                                    <td>{{ $brand->status == true ? 'Hidden': 'Visible' }}</td>
+                                    <td>{{ $brand->status == true ? 'Ẩn': 'Hiện' }}</td>
                                     <td>
-                                        <a href="#" wire:click="editBrand({{ $brand->id }})" data-bs-toggle="modal" data-bs-target="#updateBrandModal" class="btn btn-sm btn-success">Edit</a>
-                                        <a href="#" wire:click="deleteBrand({{ $brand->id }})" data-bs-toggle="modal" data-bs-target="#deleteBrandModal" class="btn btn-sm btn-danger">Delete</a>
+                                        <a href="#" wire:click="editBrand({{ $brand->id }})" data-bs-toggle="modal" data-bs-target="#updateBrandModal" class="btn btn-sm btn-success">Sửa</a>
+                                        <a href="#" wire:click="deleteBrand({{ $brand->id }})" data-bs-toggle="modal" data-bs-target="#deleteBrandModal" class="btn btn-sm btn-danger">Xóa</a>
                                     </td>
 
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="5">No Brands Found</td>
+                                    <td colspan="5">Không tìm thấy nhãn hiệu nào</td>
                                 </tr>
                                     
                             @endforelse

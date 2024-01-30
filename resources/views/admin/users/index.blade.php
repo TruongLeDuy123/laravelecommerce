@@ -13,8 +13,8 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Users
-                    <a href="{{ url('admin/users/create') }}" class="btn btn-primary btn-sm text-white float-end">Add User</a>
+                <h3>Danh sách người dùng
+                    <a href="{{ url('admin/users/create') }}" class="btn btn-primary btn-sm text-white float-end">Thêm người dùng</a>
                 </h3>
             </div>
 
@@ -23,10 +23,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
+                            <th>Tên</th>
                             <th>Email</th>
-                            <th>Role</th>
-                            <th>Action</th>
+                            <th>Vai trò</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,15 +46,15 @@
                                 </td>
 
                                 <td>
-                                    <a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-sm btn-success">Edit</a>
+                                    <a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-sm btn-success">Sửa</a>
                                     <a href="{{ url('admin/users/'.$user->id.'/delete') }}" 
-                                        onclick="return confirm('Are you sure, you want to delete this data?')" 
-                                        class="btn btn-sm btn-danger">Delete</a>
+                                        onclick="return confirm('Bạn có muốn xóa không?')" 
+                                        class="btn btn-sm btn-danger">Xóa</a>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="5">No Users Available</td>
+                                <td colspan="5">Không có người dùng nào</td>
                             </tr>
                         @endforelse
                     </tbody>

@@ -21,7 +21,7 @@
                                 </p>
                             </div>
                         @else
-                            No Image Added
+                            Không có ảnh nào được thêm
                         @endif
                     </div>
                 </div>
@@ -53,16 +53,16 @@
 
                                 <div>
                                     @if ($this->prodColorSelectedQuantity == 'outOfStock')
-                                        <label class="btn-sm py-1 mt-2 text-white bg-danger">Out of Stock</label>
+                                        <label class="btn-sm py-1 mt-2 text-white bg-danger">Hết hàng</label>
                                     @elseif($this->prodColorSelectedQuantity > 0)
-                                        <label class="btn-sm py-1 mt-2 text-white bg-success">In Stock</label>
+                                        <label class="btn-sm py-1 mt-2 text-white bg-success">Còn hàng</label>
                                     @endif
                                 </div>
                             @else
                                 @if ($product->quantity)
-                                    <label class="btn-sm py-1 mt-2 text-white bg-success">In Stock</label>
+                                    <label class="btn-sm py-1 mt-2 text-white bg-success">Còn hàng</label>
                                 @else
-                                    <label class="btn-sm py-1 mt-2 text-white bg-danger">Out of Stock</label>
+                                    <label class="btn-sm py-1 mt-2 text-white bg-danger">Hết hàng</label>
                                 @endif
                             @endif
                         </div>
@@ -76,17 +76,17 @@
                         </div>
                         <div class="mt-2">
                             <button type="button" wire:click="addToCart({{ $product->id }})" class="btn btn1">
-                                <i class="fa fa-shopping-cart"></i> Add To Cart
+                                <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
                             </button>
                             <button type="button" wire:click="addToWishList({{ $product->id }})" class="btn btn1">
                                 <span wire:loading.remove wire:target="addToWishList">
-                                    <i class="fa fa-heart"></i> Add To Wishlist
+                                    <i class="fa fa-heart"></i> Thêm vào yêu thích
                                 </span>
-                                <span wire:loading wire:target="addToWishList">Adding...</span>
+                                <span wire:loading wire:target="addToWishList">Đang thêm...</span>
                             </button>
                         </div>
                         <div class="mt-3">
-                            <h5 class="mb-0">Small Description</h5>
+                            <h5 class="mb-0">Mô tả ngắn</h5>
                             <p>
                                 {!! $product->small_description !!}
                             </p>
@@ -98,7 +98,7 @@
                 <div class="col-md-12 mt-3">
                     <div class="card">
                         <div class="card-header bg-white">
-                            <h4>Description</h4>
+                            <h4>Mô tả</h4>
                         </div>
                         <div class="card-body">
                             <p>
@@ -115,9 +115,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <h3>Related 
+                    <h3>Sản phẩm liên quan đến 
                         @if($category) {{ $category->name }} @endif
-                        Products
                     </h3>
                     <div class="underline"></div>
                 </div>
@@ -155,7 +154,7 @@
                         </div>
                     @else
                         <div class="p-2">
-                            <h4>No Related Products Available</h4>
+                            <h4>Không có sản phẩm nào liên quan</h4>
                         </div>
                     @endif
                 </div>
@@ -167,9 +166,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <h3>Related 
+                    <h3>Sản phẩm liên quan đến 
                         @if($product) {{ $product->brand }} @endif
-                        Products
                     </h3>
                     <div class="underline"></div>
                 </div>
@@ -210,7 +208,7 @@
                         </div>
                     @else
                         <div class="p-2">
-                            <h4>No Related Products Available</h4>
+                            <h4>Không có sản phẩm nào liên quan</h4>
                         </div>
                     @endif
                 </div>

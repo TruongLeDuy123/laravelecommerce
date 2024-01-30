@@ -11,8 +11,8 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Products
-                    <a href="{{ url('admin/products/create') }}" class="btn btn-primary btn-sm text-white float-end">Add Products</a>
+                <h3>Danh sách sản phẩm
+                    <a href="{{ url('admin/products/create') }}" class="btn btn-primary btn-sm text-white float-end">Thêm sản phẩm</a>
                 </h3>
             </div>
 
@@ -21,12 +21,12 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Category</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>Danh mục</th>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,22 +37,22 @@
                                     @if ($product->category)
                                         {{ $product->category->name }}
                                     @else
-                                        No Category                                        
+                                        Không có danh mục nào                                        
                                     @endif
                                 </td>
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->selling_price }}</td>
                                 <td>{{ $product->quantity }}</td>
-                                <td>{{ $product->status == '1' ? 'Hidden': 'Visible' }}</td>
+                                <td>{{ $product->status == '1' ? 'Ẩn': 'Hiện' }}</td>
                                 <td>
-                                    <a href="{{ url('admin/products/'.$product->id.'/edit') }}" class="btn btn-sm btn-success">Edit</a>
-                                    <a href="{{ url('admin/products/'.$product->id.'/delete') }}" onclick="return confirm('Are you sure, you want to delete this data?')" class="btn btn-sm btn-danger">Delete</a>
+                                    <a href="{{ url('admin/products/'.$product->id.'/edit') }}" class="btn btn-sm btn-success">Sửa</a>
+                                    <a href="{{ url('admin/products/'.$product->id.'/delete') }}" onclick="return confirm('Are you sure, you want to delete this data?')" class="btn btn-sm btn-danger">Xóa</a>
                                 </td>
 
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7">No Products Available</td>
+                                <td colspan="7">Không có sản phẩm nào</td>
                             </tr>
                         @endforelse
                     </tbody>

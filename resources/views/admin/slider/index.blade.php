@@ -11,8 +11,8 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Slider List
-                    <a href="{{ url('admin/sliders/create') }}" class="btn btn-primary btn-sm text-white float-end">Add Slider</a>
+                <h3>Danh sách Slider
+                    <a href="{{ url('admin/sliders/create') }}" class="btn btn-primary btn-sm text-white float-end">Thêm Slider</a>
                 </h3>
             </div>
 
@@ -21,11 +21,11 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>Chủ đề</th>
+                            <th>Mô tả</th>
+                            <th>Ảnh</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>     
                     <tbody>
@@ -37,10 +37,10 @@
                                 <td>
                                     <img src="{{ asset("$slider->image") }}" style="width:70px; height:70px" alt="Slider">
                                 </td>
-                                <td>{{ $slider->status == '0' ? 'Visible': 'Hidden' }}</td>
+                                <td>{{ $slider->status == '0' ? 'Hiện': 'Ẩn' }}</td>
                                 <td>
-                                    <a href="{{ url('admin/sliders/'.$slider->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                    <a href="{{ url('admin/sliders/'.$slider->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete this slider ?')" class="btn btn-danger">Delete</a>
+                                    <a href="{{ url('admin/sliders/'.$slider->id.'/edit') }}" class="btn btn-success">Sửa</a>
+                                    <a href="{{ url('admin/sliders/'.$slider->id.'/delete') }}" onclick="return confirm('Bạn có muốn xóa không ?')" class="btn btn-danger">Xóa</a>
                                 </td>
                             </tr>
                         @endforeach

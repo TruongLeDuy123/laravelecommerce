@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label>Website Name</label>
+                                <label>Tên Website</label>
                                 <input type="text" name="website_name" value="{{ $setting->website_name ?? ''}}" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
@@ -44,21 +44,21 @@
 
                 <div class="card-mb-3">
                     <div class="card-header bg-primary">
-                        <h3 class="text-white mb-0">Website - Information</h3>
+                        <h3 class="text-white mb-0">Thông tin website</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 mb-3">
-                                <label>Address</label>
+                                <label>Địa chỉ</label>
                                 <textarea name="address" class="form-control" rows="3">{{ $setting->address ?? '' }}</textarea>
 
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Phone 1 *</label>
+                                <label>SĐT 1 *</label>
                                 <input type="text" name="phone1" value="{{ $setting->phone1 ?? '' }}" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Phone No. 2</label>
+                                <label>SĐT No. 2</label>
                                 <input type="text" name="phone2" value="{{ $setting->phone2 ?? '' }}" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
@@ -76,24 +76,24 @@
 
                 <div class="card-mb-3">
                     <div class="card-header bg-primary">
-                        <h3 class="text-white mb-0">Website - Social Media</h3>
+                        <h3 class="text-white mb-0">Website - Truyền thông xã hội</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label>Facebook (Optional)</label>
+                                <label>Facebook (Không bắt buộc)</label>
                                 <input type="text" name="facebook" value="{{ $setting->facebook ?? '' }}" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Twitter (Optional)</label>
+                                <label>Twitter (Không bắt buộc)</label>
                                 <input type="text" name="twitter" value="{{ $setting->twitter ?? '' }}" class="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Instagram (Optional)</label>
+                                <label>Instagram (Không bắt buộc)</label>
                                 <input type="text" name="instagram" value="{{ $setting->instagram ?? '' }}"="form-control">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>YouTube (Optional)</label>
+                                <label>YouTube (Không bắt buộc)</label>
                                 <input type="text" name="youtube" value="{{ $setting->youtube ?? '' }}" class="form-control">
 
                             </div>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="text-end">
-                    <button type="submit" class="btn btn-primary text-white">Save Settings</button>
+                    <button type="submit" class="btn btn-primary text-white">Lưu</button>
                 </div>
 
             </form>

@@ -22,10 +22,10 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png') }}" />
     <style>
-        .form-control
-        {
+        .form-control {
             border: 1px solid #ddd;
         }
+
         .sidebar .nav .nav-item.active {
             background-color: #e9e9e9;
         }
@@ -66,7 +66,7 @@
     <script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/js/dataTables.bootstrap4.js') }}"></script>
     <!-- End custom js for this page-->
-    
+
     @yield('scripts')
 
     @livewireScripts

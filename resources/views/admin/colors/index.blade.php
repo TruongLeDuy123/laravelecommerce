@@ -11,8 +11,8 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Colors List
-                    <a href="{{ url('admin/colors/create') }}" class="btn btn-primary btn-sm text-white float-end">Add Color</a>
+                <h3>Danh sách màu sắc
+                    <a href="{{ url('admin/colors/create') }}" class="btn btn-primary btn-sm text-white float-end">Thêm màu</a>
                 </h3>
             </div>
 
@@ -21,10 +21,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Color Name</th>
-                            <th>Color</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>Tên màu</th>
+                            <th>Mã màu</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
 
                         </tr>
                     </thead>     
@@ -34,15 +34,15 @@
                                 <td>{{ $color->id }}</td>
                                 <td>{{ $color->name }}</td>
                                 <td>{{ $color->code }}</td>
-                                <td>{{ $color->status == '1' ? 'Hidden': 'Visible' }}</td>
+                                <td>{{ $color->status == '1' ? 'Ẩn': 'Hiện' }}</td>
                                 <td>
-                                    <a href="{{ url('admin/colors/'.$color->id.'/edit') }}" class="btn btn-primary btn-sm">Edit</a>
-                                    <a href="{{ url('admin/colors/'.$color->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete this data?')" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="{{ url('admin/colors/'.$color->id.'/edit') }}" class="btn btn-primary btn-sm">Sửa</a>
+                                    <a href="{{ url('admin/colors/'.$color->id.'/delete') }}" onclick="return confirm('Bạn có muốn xóa màu này không?')" class="btn btn-danger btn-sm">Xóa</a>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7">No Colors Available</td>
+                                <td colspan="7">Không có màu nào</td>
                             </tr>
                         @endforelse   
                     </tbody>   
