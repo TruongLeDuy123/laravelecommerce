@@ -87,6 +87,6 @@ User                   |                   Statistic
 :---------------------------------:        |      :------------------------------:
 <img src="./assets/adminuser.png" height="200" >  | <img src="./assets/statistic.png" height="200" >
 
-Order                               |                               
-:---------------------------------:        
+|       Order                               |                               
+|---------------------------------|
 <img src="./assets/adminorder.png" height="200">  
