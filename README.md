@@ -60,7 +60,7 @@ Products                   |                   Detail Product
 
 Products By Specific Category                  |                   
 :---------------------------------:        
-<img src="./assets/products.png" height="200" width="860" >  
+<img src="./assets/products.png" height="200" >  
 
 Profile                   |                   Change password
 :---------------------------------:        |      :------------------------------:
@@ -89,4 +89,4 @@ User                   |                   Statistic
 
 Order                   |                               
 :---------------------------------:        
-<img src="./assets/adminorder.png" height="200" width="860" >  
+<img src="./assets/adminorder.png" height="200">  
