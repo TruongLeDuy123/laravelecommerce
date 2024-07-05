@@ -17,7 +17,7 @@ A website allows customers to view, search, filter the products, add to cart, pl
     8. Add and display to Wishlist.
     9. Checkout Page.
     10. Checkout Form validation before placing the order.
-    11. Checkout Payments like - Online Paypal.
+    11. Checkout Payments like - Online Paypal and Cash on Delivery.
     12. Mail Notification - User gets a Mail Notification once the order is placed. 
     13. User can view orders.
     14. User Profile
