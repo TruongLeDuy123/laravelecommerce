@@ -5,35 +5,35 @@ A website allows customers to view, search, filter the products, add to cart, pl
 ## Tech Stack Used:
     PHP, Laravel, MySQL, Bootstrap, Ajax.
 ## Website Functions:
-### * User
+### * Customer
 ```bash
     1. Login and Register
     2. View all Categories
     3. View all Products under specific categories.
     4. Filter all Products by Brands and Price.
     5. View a single product with an image and its details.
-    6. Add and display to Cart.
-    7. Add and to Wishlist.
-    8. Checkout Page.
-    9. Checkout Form validation before placing the order.
-    10. User can view orders.
-    11. User Profile
-    12. Change Password option
+    6. Product quantity increment/decrement before adding it to the cart.
+    7. Add and display to Cart.
+    8. Add and display to Wishlist.
+    9. Checkout Page.
+    10. Checkout Form validation before placing the order.
+    11. Checkout Payments like - Online Paypal.
+    12. Mail Notification - User gets a Mail Notification once the order is placed. 
+    13. User can view orders.
+    14. User Profile
+    15. Change Password option
 ```
 ### * Admin
 ```bash
     1. Category CRUD
     2. Product CRUD
-        a) Add, Edit, Update, Delete Products
-        b) Can add multiple images for the product.
-        c) Can add multiple colors for the product.
     3. Brand CRUD - these brands are linked with products
     4. Color CRUD - these colors are linked with products
     5. User Management CRUD with Role
     6. Order Management
         a) View All Orders List
         b) Filter orders by date and order-status
-        c) View each order with user & order details.
+        c) View each order with user and order details.
         d) Invoice - View each order invoice
         e) Invoice - Download each order invoice as PDF.
         f) Invoice - Mail each order Invoice.
